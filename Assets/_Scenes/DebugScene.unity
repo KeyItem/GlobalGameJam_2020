@@ -357,17 +357,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2deb577cdff9f54faad0a6daf1a8caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFolder:
-    name: 
-    lastAccessDate: 
-    sizeBytes: 0
-    files: []
+  currentFolder: {fileID: 0}
   currentAvailableFiles: []
-  baseFolder:
-    name: 
-    lastAccessDate: 
-    sizeBytes: 0
-    files: []
+  baseFolder: {fileID: 11400000, guid: 184fec042f2119e41b93c7da51a942b8, type: 2}
 --- !u!1 &1233534801
 GameObject:
   m_ObjectHideFlags: 0

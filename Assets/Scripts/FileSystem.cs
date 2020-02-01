@@ -6,13 +6,24 @@ using UnityEngine;
 public class FileSystem : MonoBehaviour
 {
     [Header("File System Attributes")] 
-    public FolderData currentFolder;
+    public FolderFile currentFolder;
     public FileData[] currentAvailableFiles;
 
     [Space(10)] 
-    public FolderData baseFolder;
+    public FolderFile baseFolder;
 
-    public void MoveToFolder(FolderData newFolder)
+    private void Awake()
+    {
+        Initialize();
+    }
+    
+    protected void Initialize()
+    {
+        currentFolder = baseFolder;
+        currentAvailableFiles = ReturnFilesFromFolder(baseFolder);
+    }
+
+    public void MoveToFolder(FolderFile newFolder)
     {
         currentFolder = newFolder;
         currentAvailableFiles = ReturnFilesFromFolder(newFolder);
@@ -22,7 +33,7 @@ public class FileSystem : MonoBehaviour
         return currentAvailableFiles;
     }
 
-    private FileData[] ReturnFilesFromFolder(FolderData folder)
+    private FileData[] ReturnFilesFromFolder(FolderFile folder)
     {
         return folder.files;
     }

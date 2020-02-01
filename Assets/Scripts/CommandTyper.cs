@@ -126,6 +126,9 @@ public class CommandTyper : MonoBehaviour
         protected void EnterBasicCommand(Command command)
         {
             UI.SetNewBacklogText(command.info.commandText);
+            
+            command.InitializeCommand();
+            command.ExecuteCommand();
         }
 
         protected Command ReturnLastCommand()

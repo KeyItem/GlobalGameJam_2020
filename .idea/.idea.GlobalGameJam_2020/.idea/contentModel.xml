@@ -15,7 +15,8 @@
           <e p="CommandTyper.cs" t="Include" />
           <e p="FileSystem.cs" t="Include" />
           <e p="Folders" t="Include">
-            <e p="Folder.cs" t="Include" />
+            <e p="FolderFile.cs" t="Include" />
+            <e p="FolderFileBasic.cs" t="Include" />
           </e>
           <e p="UIManager.cs" t="Include" />
         </e>

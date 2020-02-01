@@ -5,7 +5,7 @@ using UnityEngine;
 public class CommandMove : Command
 {
     [Header("Folder Data")] 
-    public FolderData folder;
+    public FolderFile folder;
 
     private FileSystem filesystem;
     
