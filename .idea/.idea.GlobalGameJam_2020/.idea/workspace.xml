@@ -36,11 +36,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Commands/Command.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Folders/Folder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Folders/FolderFileBasic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Folders/FolderFile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommandTyper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Folders/FolderFile.cs" />
       </list>
     </option>
   </component>

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0498e41da56d664eb305fac1f2b1da2, type: 3}
   m_Name: RootFolder
   m_EditorClassIdentifier: 
+  folders:
+  - {fileID: 0}
   files:
   - name: Emails
     lastAccessDate: 
