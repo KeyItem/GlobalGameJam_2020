@@ -5,21 +5,30 @@ using UnityEngine;
 
 public class CommandTyper : MonoBehaviour
 {
+    [Header("UI Attributes")] 
+    private UIManager UI;
+    
+    [Header("Command Attributes")] 
+    public Command[] allCommands;
+    
+    [Space(10)]
+    public Command[] possibleCommands;
+
+    [Space(10)] 
+    public Command errorCommand;
+    
+    [Space(10)]
+    public Command lastCommandEntered;
+    
     [Header("Input Attributes")] 
     private string currentString;
+    private string currentFunctionString;
+    private string currentArguementString;
+    
     private char lastChar;
     
     [SerializeField]
     private bool canInput = true;
-
-    [Header("Command Attributes")] 
-    public CommandList allCommands;
-    
-    [Space(10)]
-    public CommandInfo[] possibleCommands;
-    
-    [Space(10)]
-    public CommandInfo lastCommandEntered;
 
     private void Awake()
     {
@@ -33,9 +42,9 @@ public class CommandTyper : MonoBehaviour
 
     protected void Initialize()
     {
+        UI = GetComponent<UIManager>();
+        
         currentString = "";
-
-        possibleCommands = allCommands.commandList;
     }
 
     protected void ManageInput()
@@ -61,144 +70,172 @@ public class CommandTyper : MonoBehaviour
             }
         }
     }
-    
+
     protected void AddLetter(char key)
-    {
-        currentString += key;
-        
-        Debug.Log(currentString);
-    }
-
-    protected void Backspace()
-    {
-        char[] inputChars = currentString.ToCharArray();
-
-        if (inputChars.Length > 0)
         {
-            currentString = currentString.Substring(0, currentString.Length - 1);
+            currentString += key;
             
-            Debug.Log(currentString);
+            UI.SetNewInputText(currentString);
         }
-    }
 
-    protected void Enter()
-    {
-        if (IsInputCommand(currentString))
+        protected void Backspace()
         {
-            if (IsCommandAvailable(currentString, possibleCommands))
+            char[] inputChars = currentString.ToCharArray();
+
+            if (inputChars.Length > 0)
             {
-                Debug.Log("Command");
+                currentString = currentString.Substring(0, currentString.Length - 1);
+            
+                UI.SetNewInputText(currentString);
             }
         }
-        
-        currentString = string.Empty;
-    }
-    
-    protected void EnterCommand(CommandInfo commandInfo, CommandArguments commandArguments)
-    {
-        
-    }
 
-    protected CommandInfo ReturnLastCommand()
-    {
-        return lastCommandEntered;
-    }
-
-    protected bool IsInputCommand(string newString)
-    {
-        for (int i = 0; i < allCommands.commandList.Length; i++)
+        protected void Enter()
         {
-            if (newString == allCommands.commandList[i].commandString || newString == allCommands.commandList[i].alternativeString)
+            string[] newSplitString = SplitStringIntoParts(currentString);
+            
+            if (IsInputBasicCommand(newSplitString))
+            {
+                Command newBasicCommand = ReturnBasicCommand(newSplitString);
+                    
+                EnterBasicCommand(newBasicCommand);
+            }
+            else if (IsInputAvailableCommand(newSplitString, possibleCommands))
+            {
+                Command newCommand = ReturnCommand(newSplitString, possibleCommands);
+                    
+                EnterCommand(newCommand);
+            }
+            else
+            {
+                EnterBasicCommand(errorCommand);
+            }
+        
+            currentString = string.Empty;
+            UI.SetNewInputText(currentString);
+        }
+    
+        protected void EnterCommand(Command command)
+        {
+            UI.SetNewBacklogText(command.info.commandText);
+            
+            command.InitializeCommand();
+            command.ExecuteCommand();
+        }
+
+        protected void EnterBasicCommand(Command command)
+        {
+            UI.SetNewBacklogText(command.info.commandText);
+        }
+
+        protected Command ReturnLastCommand()
+        {
+            return lastCommandEntered;
+        }
+
+        protected Command ReturnCommand(string[] commandString, Command[] listOfAvailableCommands)
+        {
+            if (commandString.Length > 1)
+            {
+                for (int i = 0; i < listOfAvailableCommands.Length; i++)
+                {
+                    if (commandString[0] == listOfAvailableCommands[i].info.commandString || commandString[0] == listOfAvailableCommands[i].info.alternativeCommandString)
+                    {
+                        if (commandString[1] == listOfAvailableCommands[i].arguments.rawArguments)
+                        {
+                            return listOfAvailableCommands[i];
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        protected Command ReturnBasicCommand(string[] commandString)
+        {
+            for (int i = 0; i < allCommands.Length; i++)
+            {
+                if (commandString[0] == allCommands[i].info.commandString || commandString[0] == allCommands[i].info.alternativeCommandString)
+                {
+                    return allCommands[i];
+                }
+            }
+            
+            return null;
+        }
+
+        protected string[] SplitStringIntoParts(string myString)
+        {
+            string[] newSplitString = myString.Split(' ');
+            
+            return newSplitString;
+        }
+        
+        protected bool IsInputBasicCommand(string[] newString)
+        {
+            for (int i = 0; i < allCommands.Length; i++)
+            {
+                if (newString[0] == allCommands[i].info.commandString || newString[0] == allCommands[i].info.alternativeCommandString)
+                {
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+
+        private bool IsInputAvailableCommand(string[] newCommand, Command[] listOfAvailableCommands)
+        {
+            if (newCommand.Length > 1)
+            {
+                for (int i = 0; i < listOfAvailableCommands.Length; i++)
+                {
+                    if (newCommand[0] == listOfAvailableCommands[i].info.commandString || newCommand[0] == listOfAvailableCommands[i].info.alternativeCommandString)
+                    {
+                        if (newCommand[1] == listOfAvailableCommands[i].arguments.rawArguments)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+    
+        protected CommandInfo ReturnCommandFromString(string newString, CommandInfo[] listOfAvailableCommands)
+        {
+            CommandInfo newCommand = new CommandInfo();
+        
+            for (int i = 0; i < listOfAvailableCommands.Length; i++)
+            {
+                if (newString == listOfAvailableCommands[i].commandString)
+                {
+                    newCommand = listOfAvailableCommands[i];
+                }
+            }
+
+            return newCommand;
+        }
+
+        private bool IsBackspaceInput(char key)
+        {
+            if (key == '\b' )
             {
                 return true;
             }
+
+            return false;
         }
 
-        return false;
-    }
-    
-    protected bool IsCommandAvailable(string newString, CommandInfo[] listOfAvailableCommands)
-    {
-        for (int i = 0; i < listOfAvailableCommands.Length; i++)
+        private bool IsEnterInput(char key)
         {
-            if (newString == listOfAvailableCommands[i].commandString)
+            if ((key == '\n') || (key == '\r') )
             {
                 return true;
             }
+
+            return false;
         }
-
-        return false;
-    }
-    
-    protected CommandInfo ReturnCommandFromString(string newString, CommandInfo[] listOfAvailableCommands)
-    {
-        CommandInfo newCommand = new CommandInfo();
-        
-        for (int i = 0; i < listOfAvailableCommands.Length; i++)
-        {
-            if (newString == listOfAvailableCommands[i].commandString)
-            {
-                newCommand = listOfAvailableCommands[i];
-            }
-        }
-
-        return newCommand;
-    }
-
-    private bool IsBackspaceInput(char key)
-    {
-        if (key == '\b' )
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    private bool IsEnterInput(char key)
-    {
-        if ((key == '\n') || (key == '\r') )
-        {
-            return true;
-        }
-
-        return false;
-    }
-}
-
-[System.Serializable]
-public struct CommandList
-{
-    [Header("Command List")] 
-    public CommandInfo[] commandList;
-}
-
-[System.Serializable]
-public struct CommandInfo
-{
-    [Header("Command Info Attributes")] 
-    public string name;
-    
-    [Space(10)]
-    public COMMAND_TYPE commandType;
-
-    [Space(10)] 
-    public string commandString;
-    public string alternativeString;
-}
-
-[System.Serializable]
-public struct CommandArguments
-{
-    [Header("Command Arguments")] 
-    public string rawArguments;
-}
-
-[System.Serializable]
-public enum COMMAND_TYPE
-{
-    NONE,
-    MOVE_DIRECTORY,
-    LIST,
-    OPEN,
 }

@@ -8,13 +8,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/Command.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Folders/Folder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CommandTyper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandOpenImage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandBasic.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Typer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommandParser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FolderData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileSysten.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommandInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Command.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommandData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandBasic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommandTyper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandOpenImage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/Command.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Folders/Folder.cs" />
       </list>
     </option>
   </component>
@@ -57,4 +80,10 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="WindowStateProjectService">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1580581450337">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1580581450337" />
+  </component>
 </project>
