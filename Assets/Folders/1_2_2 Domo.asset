@@ -25,5 +25,5 @@ MonoBehaviour:
     sizeBytes: 0
     filePassword: 
     hasPassword: 0
-    text: Content has been lost. Please contact IT to recover data.
+    text: "Error: Content has been lost. \n\nPlease contact IT to recover data."
     image: {fileID: 0}

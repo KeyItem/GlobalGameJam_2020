@@ -22,14 +22,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a19173c1e8bfe14d8e6f36c3fbff408, type: 2}
   - {fileID: 11400000, guid: 2ec6054d14a8400438b01ca048d5f7b8, type: 2}
   files:
-  - name: Reminder.txt
+  - name: MUSTDO.txt
     type: 1
     lastAccessDate: File
     sizeBytes: 0
     filePassword: 
     hasPassword: 0
-    text: "- Take care of emails.\r\n\n- Print stuff when needed.\r\n\n- Appointment
-      for Lasik. \r\n\n- Funeral house.\r\n\n- Finally win a game of Chess.\n"
+    text: '- Print out that .pdf from Daryl.
+
+      - Clean out emails.'
     image: {fileID: 0}
   - name: Cat.bmp
     type: 2
@@ -38,12 +39,12 @@ MonoBehaviour:
     filePassword: 
     hasPassword: 0
     text: 
-    image: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}
+    image: {fileID: 21300000, guid: d3c7aee75cfb17f4c86bbbb61faafa99, type: 3}
   - name: ToBePrinted.pdf
-    type: 1
+    type: 2
     lastAccessDate: File
     sizeBytes: 0
-    filePassword: 
-    hasPassword: 0
-    text: Hello to be Printed
-    image: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}
+    filePassword: 0000001
+    hasPassword: 1
+    text: 
+    image: {fileID: 21300000, guid: 66949759b3dadd84cb52a2c19f9350ec, type: 3}

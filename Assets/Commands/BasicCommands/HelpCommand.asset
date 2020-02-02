@@ -29,8 +29,16 @@ MonoBehaviour:
       - open : Opens target File (ex: open Picture1.png)
 
       - ls/list
-      : Shows a list of all files in the current folder (Ex: list)
+      : Shows a list of all files in the current folder (ex: list)
 
-'
+
+      - For
+      password protected files: after the open command, input the password.
+
+      Passwords
+      are only 7 Digits
+
+
+      (ex: Picture1.png 1000000)'
   arguments:
     rawArguments: 

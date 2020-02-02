@@ -24,7 +24,8 @@ MonoBehaviour:
     lastAccessDate: File
     sizeBytes: 0
     filePassword: 
-    text: "From: dFeral@MOffices.com\r\nDate: 01/31/2020\r\nSubject: [Top Priortiy]
+    hasPassword: 0
+    text: "From: dFeral@MOffices.com\r\nDate: 1/31/2020\r\nSubject: [Top Priortiy]
       Must do before meeting\r\nHey Robin,\r\n\r\nHere\u2019s the pdf file with our
       business proposal I mentioned last night. This is our biggest break yet so
       please print toBePrinted.pdf before our meeting today!\r\n\r\nAlso, IT has
@@ -38,9 +39,10 @@ MonoBehaviour:
     lastAccessDate: File
     sizeBytes: 0
     filePassword: 
+    hasPassword: 0
     text: 'From: donotreply@QuickFixes.com
 
-      Date: 01/15/2020
+      Date: 1/02/2020
 
       Subject:
       FW: Your Repair2000 Receipt
@@ -75,7 +77,8 @@ MonoBehaviour:
     lastAccessDate: File
     sizeBytes: 0
     filePassword: 
-    text: "From: info@unorganization.org\r\nDate: 0/0/0000\r\nSubject: Notice from
+    hasPassword: 0
+    text: "From: info@unorganization.org\r\nDate: 1/12/2020\r\nSubject: Notice from
       BOUN\r\n\r\nThe Board of United Nations wishes to notify you once again of
       your status via your email address as our previous letter to your home address
       mailbox was returned undelivered, therefore we use this above email/letter
@@ -86,18 +89,20 @@ MonoBehaviour:
       cash boxed-money to your designated doorstep. The high delivery agent has left
       since three days ago with the security proof box in worth of US$17,500.000.00
       Million and has arrived in your city. You're advised to reconfirm your delivery
-      address to him, to enable him deliver the boxed-Money to you within the stipulated
-      DATE. So contact him immediately, \r\n\r\nContact Name: Mark Edward. Tel No:
-      +1(213)788-5411, Email: (edmark.un.deliveryagent@gmail.com) Mr. Alexander Smith.\r\n"
+      address to him, to enable him deliver the boxed-Money to you within the stipulated 
+      00DATE00 . So contact him immediately, \r\n\r\nContact Name: Mark Edward. Tel
+      No: +1(213)788-5411, Email: (edmark.un.deliveryagent@gmail.com) Mr. Alexander
+      Smith.\r\n"
     image: {fileID: 0}
   - name: P.msg
     type: 1
     lastAccessDate: File
     sizeBytes: 0
     filePassword: 
+    hasPassword: 0
     text: 'From: infoVIP@NNP.com
 
-      Date: 0/0/0000
+      Date: 01/13/2020
 
       Subject: (No Subjet)
 
@@ -119,8 +124,8 @@ MonoBehaviour:
       name, in your United States account, then you can forward the funds as directed
       by the Nigerian National Petroleum Company. In exchange for your accommodating
       services, the Nigerian National Petroleum Company would agree to allow you
-      to retain 10%, or US$4 million of this amount which is good PAYMENT for your
-      troubles. However, to be a legitimate transferee of these moneys according
+      to retain 10%, or US$4 million of this amount which is good   00PAYMENT00 
+      for your troubles. However, to be a legitimate transferee of these moneys according
       to Nigerian law, you must presently be a depositor of at least US$100,000 in
       a Nigerian bank which is regulated by the Central Bank of Nigeria. If it will
       be possible for you to assist us, we would be most grateful. We suggest that
@@ -141,6 +146,7 @@ MonoBehaviour:
     lastAccessDate: File
     sizeBytes: 0
     filePassword: 
+    hasPassword: 0
     text: "From: sMich@MOfficesIT.com\r\nDate: 01/13/2020\r\nSubject: [Ticket Status:
       Solved] Spam Emails\r\n\r\nWe solved the spam emails you\u2019ve been getting.\r\n\r\nIf
       there\u2019s anything else we could help with, please don\u2019t hesitate to
@@ -151,6 +157,7 @@ MonoBehaviour:
     lastAccessDate: File
     sizeBytes: 0
     filePassword: 
+    hasPassword: 0
     text: "From: talentFinder@MOfficesIT.com\r\nDate: 01/27/2020\r\nSubject: [Job
       Posting] Junior IT positions\r\n\r\nSIKE WE LIVE 4 EVER\r :D"
     image: {fileID: 0}
@@ -159,6 +166,7 @@ MonoBehaviour:
     lastAccessDate: File
     sizeBytes: 0
     filePassword: 
+    hasPassword: 0
     text: "From: SavyMich@Rmail.com\r\nDate: 01/28/2020\r\nSubject: Re: [Job Posting]
       Junior IT positions\r\n\r\nHey, this is Sarah, \r\n\r\nI\u2019m apologizing
       on behalf of Richard who decided to hack your network yesterday.\r\n\r\nI know
