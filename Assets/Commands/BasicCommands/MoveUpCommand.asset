@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ed620fd5bfefbc40b515ee3e00e52e2, type: 3}
-  m_Name: ErrorCommandBasic
+  m_Name: MoveUpCommand
   m_EditorClassIdentifier: 
   info:
-    name: Error
-    commandType: 5
-    commandString: ERROR
-    alternativeCommandString: ERROR
-    commandText: 'ERROR : INVALID COMMAND ENTERED
-
-
-      TYPE HELP FOR LIST OF AVAILABLE
-      COMMANDS'
+    name: MoveUp
+    commandType: 1
+    commandString: cd
+    alternativeCommandString: Moveup
+    commandText: Moving to Parent Folder
   arguments:
     rawArguments: 

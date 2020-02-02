@@ -8,16 +8,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Folders/FolderFileBasic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/Command.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Folders/FolderFile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandList.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CommandTyper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandOpenImage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandBasic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Folders/FolderFile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Folders/FolderFileBasic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIBlinker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/Command.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CommandManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandOpenText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandGoUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandOpenImage.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -36,11 +39,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Commands/Command.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Folders/Folder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Folders/FolderFileBasic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommandTyper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandList.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIBlinker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandOpenText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommandTyper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandGoUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Folders/FolderFile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommandManager.cs" />
       </list>
     </option>
   </component>

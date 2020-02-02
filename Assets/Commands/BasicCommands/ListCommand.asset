@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0498e41da56d664eb305fac1f2b1da2, type: 3}
-  m_Name: 2_0 Fix
+  m_Script: {fileID: 11500000, guid: 8ed620fd5bfefbc40b515ee3e00e52e2, type: 3}
+  m_Name: ListCommand
   m_EditorClassIdentifier: 
-  name: Fix
-  lastAccessDate: 
-  sizeBytes: 0
-  commands: []
-  parentFolder: {fileID: 11400000, guid: 184fec042f2119e41b93c7da51a942b8, type: 2}
-  folders: []
-  files: []
+  info:
+    name: List
+    commandType: 2
+    commandString: ls
+    alternativeCommandString: list
+    commandText: 'List of files in folder :'
+  arguments:
+    rawArguments: 

@@ -15,8 +15,11 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI backlogText;
 
-    [Space(10)] [SerializeField] 
-    public Image imageBox;
+    [Space(10)] 
+    [SerializeField] 
+    private Image imageBox;
+    [SerializeField]
+    private TextMeshProUGUI textBox;
     
     private void Awake()
     {
@@ -33,15 +36,40 @@ public class UIManager : MonoBehaviour
         inputText.text = newText;
     }
 
+    public void ClearInputText()
+    {
+        inputText.text = string.Empty;
+    }
+
     public void SetNewBacklogText(string newBacklogText)
     {
         backlogText.text = newBacklogText;
     }
 
+    public void ClearBacklogText()
+    {
+        backlogText.text = string.Empty;
+    }
+
     public void LoadImage(Sprite targetImage)
     {
-        imageBox.enabled = true;
         imageBox.sprite = targetImage;
+        imageBox.enabled = true;
+    }
+
+    public void LoadText(string newText)
+    {
+        textBox.text = newText;
+        textBox.enabled = true;
+    }
+
+    public void CloseOpenWindows()
+    {
+        imageBox.enabled = false;
+        imageBox.sprite = null;
+
+        textBox.enabled = false;
+        textBox.text = string.Empty;
     }
 }
 

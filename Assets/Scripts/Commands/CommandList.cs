@@ -19,7 +19,7 @@ public class CommandList : Command
 
    public override void ExecuteCommand()
    {
-      FileData[] files = filesystem.ReturnFiles();
+      FileData[] files = filesystem.ReturnFilesInFolder();
       
       string testString = String.Empty;;
 
