@@ -35,7 +35,7 @@ MonoBehaviour:
       Missing files in GI,
       Managed, Domo, and Resources.'
     image: {fileID: 0}
-  - name: 'GGJ20.dll '
+  - name: GGJ20.dll
     type: 1
     lastAccessDate: File
     sizeBytes: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
     hasPassword: 0
     text: PC cannot open .dll files.
     image: {fileID: 0}
-  - name: 'Credits.txt '
+  - name: Credits.txt
     type: 1
     lastAccessDate: File
     sizeBytes: 0

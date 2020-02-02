@@ -46,7 +46,7 @@ MonoBehaviour:
     hasPassword: 0
     text: Missing files, cannot open using game engine.
     image: {fileID: 0}
-  - name: 'resource.asset '
+  - name: resource.asset
     type: 1
     lastAccessDate: File
     sizeBytes: 0
