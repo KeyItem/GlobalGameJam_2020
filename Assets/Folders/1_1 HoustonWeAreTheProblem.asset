@@ -46,7 +46,10 @@ MonoBehaviour:
     sizeBytes: 0
     filePassword: 
     hasPassword: 0
-    text: "\rCredits:\r\n\nMatthew Ferreira - Programmer.\r\nRyon Everett - Audio.\r\nSteven
-      Ramos - Game Designer.\r\nVan Tran - Moral Support.\n\n\nAssets used from:\r\n\nhttp://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20\r\nBethesda
-      Softworks\r\n"
+    text: "\rCredits:\r\nMatthew Ferreira - Programmer and editor master\nRyon Everett
+      - Audio and mild debugger\nSteven Ramos - Game designer and cry baby.\nVan
+      Tran - Moral support and general support.\n\rDaryl - Our muse.\n\nBathesda
+      Games\r\nhttps://www.fesliyanstudios.com/ keyboard sounds - used under \r\nGNU
+      General Public License v2.0\r\nLinks: http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20\r\nMegumin
+      Report: https://www.youtube.com/watch?v=5Aiwbr2uROw"
     image: {fileID: 0}
