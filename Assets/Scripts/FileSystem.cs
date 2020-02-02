@@ -163,13 +163,15 @@ public struct FileData
     public Sprite image;
 
     public bool DoesInputMatchPassword(string[] inputString)
-    {
-        if (inputString.Length > 3)
+    {        
+        if (inputString.Length > 2)
         {
-            if (inputString[3].Equals(filePassword, StringComparison.OrdinalIgnoreCase))
+            if (inputString[2].Equals(filePassword, StringComparison.OrdinalIgnoreCase))
             {
                 return true;
             }
+            
+            Debug.Log(inputString[2]);
         }
 
         return false;
