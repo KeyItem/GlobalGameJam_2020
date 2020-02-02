@@ -65,9 +65,9 @@ public class CameraShake2D : MonoBehaviour {
 
 	public void ShakeCamera (float duration, float amplitude, float decay)
     {
-        
-        Debug.Log("I'm Shaking");
-		shakeDuration = duration;
+	    Debug.Log("Test");
+	    
+	    shakeDuration = duration;
 		shakeAmount = amplitude;
 		decreaseFactor = decay;
 	}

@@ -24,6 +24,9 @@
             <e p="FolderFile.cs" t="Include" />
             <e p="FolderFileBasic.cs" t="Include" />
           </e>
+          <e p="JUICE" t="Include">
+            <e p="CameraShake2D.cs" t="Include" />
+          </e>
           <e p="Timer.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="UIManager.cs" t="Include" />
