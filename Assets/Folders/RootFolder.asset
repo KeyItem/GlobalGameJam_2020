@@ -15,21 +15,22 @@ MonoBehaviour:
   commands:
   - {fileID: 11400000, guid: 116908e737185f84388f76c20334274a, type: 2}
   - {fileID: 11400000, guid: 00806d92f633cf4438059862721977ab, type: 2}
+  parentFolder: {fileID: 11400000}
   folders:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c157f036e3841964695e3d0f696a3871, type: 2}
+  - {fileID: 11400000, guid: 2a19173c1e8bfe14d8e6f36c3fbff408, type: 2}
+  - {fileID: 11400000, guid: 2ec6054d14a8400438b01ca048d5f7b8, type: 2}
   files:
-  - name: Emails
-    lastAccessDate: 
+  - name: Reminder.txt
+    type: 1
+    lastAccessDate: TODO
     sizeBytes: 0
-  - name: Builds
-    lastAccessDate: 
+    text: "- Take care of emails.\r\n\n- Print stuff when needed.\r\n\n- Appointment
+      for Lasik. \r\n\n- Funeral house.\r\n\n- Finally win a game of Chess.\n"
+    image: {fileID: 0}
+  - name: Cat.bmp
+    type: 2
+    lastAccessDate: TODO
     sizeBytes: 0
-  - name: Fix
-    lastAccessDate: 
-    sizeBytes: 0
-  - name: cat.bmp
-    lastAccessDate: 
-    sizeBytes: 0
-  - name: reminder.txt
-    lastAccessDate: 
-    sizeBytes: 0
+    text: 
+    image: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}

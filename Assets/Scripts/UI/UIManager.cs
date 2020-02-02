@@ -36,9 +36,19 @@ public class UIManager : MonoBehaviour
         inputText.text = newText;
     }
 
+    public void ClearInputText()
+    {
+        inputText.text = string.Empty;
+    }
+
     public void SetNewBacklogText(string newBacklogText)
     {
         backlogText.text = newBacklogText;
+    }
+
+    public void ClearBacklogText()
+    {
+        backlogText.text = string.Empty;
     }
 
     public void LoadImage(Sprite targetImage)

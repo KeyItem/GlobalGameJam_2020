@@ -10,13 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ed620fd5bfefbc40b515ee3e00e52e2, type: 3}
-  m_Name: ErrorMoveCommandBasic
+  m_Name: ErrorMoveCommand
   m_EditorClassIdentifier: 
   info:
     name: ErrorMove
     commandType: 5
-    commandString: moveError
-    alternativeCommandString: moveError
-    commandText: Unable to move to specified file, files does not exist.
+    commandString: ERRORMOVE
+    alternativeCommandString: ERRORMOVE
+    commandText: 'Error : Unable to move to specified file, files does not exist.
+
+
+      Please
+      enter a valid filename.'
   arguments:
     rawArguments: 

@@ -13,10 +13,7 @@ public class FileSystem : MonoBehaviour
 
     [Space(10)] 
     public FolderFile baseFolder;
-
-    [Header("Command Manager")] 
-    private CommandManager manager;
-
+    
     private void Awake()
     {
         Initialize();
@@ -26,8 +23,6 @@ public class FileSystem : MonoBehaviour
     {
         currentFolder = baseFolder;
         currentAvailableFiles = ReturnFilesFromFolder(baseFolder);
-
-        manager = GetComponent<CommandManager>();
     }
 
     public void MoveToFolder(FolderFile newFolder)
@@ -36,8 +31,6 @@ public class FileSystem : MonoBehaviour
         currentAvailableFiles = ReturnFilesFromFolder(newFolder);
 
         previousFolder = newFolder.parentFolder;
-        
-        manager.SetAvailableCommands(newFolder.commands);
     }
 
     public void ReturnToParentFolder()
@@ -47,7 +40,7 @@ public class FileSystem : MonoBehaviour
             MoveToFolder(previousFolder);
         }
     }
-    public FileData[] ReturnFiles()
+    public FileData[] ReturnFilesInFolder()
     {
         return currentAvailableFiles;
     }
@@ -104,14 +97,24 @@ public class FileSystem : MonoBehaviour
 
         return null;
     }
+
+    public FolderFile[] ReturnFoldersInFolder()
+    {
+        return currentFolder.folders;
+    }
+
+    public FolderFile ReturnParentFolder()
+    {
+        return currentFolder.parentFolder;
+    }
     
     public bool IsFolderAvailableToMove(string[] newCommand)
     {
-        for (int i = 0; i < currentFolder.folders.Length; i++)
+        if (newCommand.Length > 1)
         {
-            if (newCommand.Length > 1)
+            foreach (FolderFile folder in currentFolder.folders)
             {
-                if (newCommand[1] == currentFolder.files[i].name)
+                if (newCommand[1] == folder.name)
                 {
                     return true;
                 }
@@ -140,7 +143,25 @@ public struct FileData
 {
     [Header("File Data Attributes")] 
     public string name;
+
+    public FILE_TYPE type;
+    
     public string lastAccessDate;
 
     public int sizeBytes;
+
+    [Space(10)]
+    [TextArea(15, 60)]
+    public string text;
+
+    [Space(10)]
+    public Sprite image;
+}
+
+[System.Serializable]
+public enum FILE_TYPE
+{
+    NONE,
+    TEXT,
+    IMAGE
 }

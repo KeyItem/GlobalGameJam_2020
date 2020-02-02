@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0498e41da56d664eb305fac1f2b1da2, type: 3}
   m_Name: 1_1 HoustonWeAreTheProblem
   m_EditorClassIdentifier: 
+  name: HouseWeAreTheProblem
+  lastAccessDate: 
+  sizeBytes: 0
   commands: []
   parentFolder: {fileID: 11400000, guid: 2a19173c1e8bfe14d8e6f36c3fbff408, type: 2}
   folders: []
