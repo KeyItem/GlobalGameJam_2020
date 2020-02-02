@@ -8,6 +8,11 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [Header("UI Attributes")] 
+    public TextDisplayAttributes displayAttributes;
+
+    private IEnumerator activeTyper;
+    
+    [Space(10)]
     [SerializeField]
     private TextMeshProUGUI inputText;
 
@@ -43,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     public void SetNewBacklogText(string newBacklogText)
     {
-        backlogText.text = newBacklogText;
+        StartDisplayTyper(newBacklogText);
     }
 
     public void ClearBacklogText()
@@ -71,6 +76,36 @@ public class UIManager : MonoBehaviour
         textBox.enabled = false;
         textBox.text = string.Empty;
     }
+
+    private void StartDisplayTyper(string newText)
+    {
+        if (activeTyper != null)
+        {
+            StopCoroutine(activeTyper);
+        }
+
+        backlogText.text = string.Empty;
+
+        activeTyper = DisplayText(newText, displayAttributes.textDisplayDelay);
+
+        Debug.Log("Starting Text");
+        
+        StartCoroutine(activeTyper);
+    }
+    
+    private IEnumerator DisplayText(string newText, float delay)
+    {
+        char[] letters = newText.ToCharArray();
+        
+        foreach (char letter in letters)
+        {
+            backlogText.text += letter;
+            
+            yield return new WaitForSeconds(delay);
+        }
+
+        yield return null;
+    }
 }
 
 [System.Serializable]
@@ -78,4 +113,11 @@ public struct TextElement
 {
     [Header("Text Element Attributes")] 
     public string text;
+}
+
+[System.Serializable]
+public struct TextDisplayAttributes
+{
+    [Header("Text Display Attributes")] 
+    public float textDisplayDelay;
 }

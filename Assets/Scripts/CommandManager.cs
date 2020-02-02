@@ -7,11 +7,7 @@ public class CommandManager : MonoBehaviour
 {
     [Header("Audio Attributes")] 
     public AudioManager audio;
-
-    [Header("What Does It Shake")]
-    [Space(10)]
-    public CameraShake2D lilPeeper;
-
+    
     [Header("UI Attributes")] 
     private UIManager UI;
     
@@ -55,7 +51,6 @@ public class CommandManager : MonoBehaviour
         UI = GetComponent<UIManager>();
         filesystem = GetComponent<FileSystem>();
         audio = GetComponent<AudioManager>();
-        lilPeeper = GetComponent<CameraShake2D>();
         currentString = "";
     }
 
@@ -90,8 +85,6 @@ public class CommandManager : MonoBehaviour
             UI.SetNewInputText(currentString);
             
             audio.StartSFX();
-            lilPeeper.ShakeCamera(lilPeeper.shakeDuration,lilPeeper.shakeAmount,lilPeeper.decreaseFactor);
-
         }
 
         protected void Backspace()

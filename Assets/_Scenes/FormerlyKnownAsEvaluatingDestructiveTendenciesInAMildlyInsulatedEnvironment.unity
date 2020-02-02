@@ -898,7 +898,6 @@ GameObject:
   - component: {fileID: 1851925598}
   - component: {fileID: 1851925597}
   - component: {fileID: 1851925596}
-  - component: {fileID: 1851925599}
   m_Layer: 5
   m_Name: UIConsole
   m_TagString: Untagged
@@ -1000,6 +999,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71be551d576932468263d77ab9bb1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayAttributes:
+    textDisplayDelay: 0.01
   inputText: {fileID: 1233534803}
   backlogText: {fileID: 1285596712}
   imageBox: {fileID: 1347778704}
@@ -1017,7 +1018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 0}
-  lilPeeper: {fileID: 0}
   allCommands:
   - {fileID: 11400000, guid: 4d8a2683b0e1bec45808b039786c8bb6, type: 2}
   - {fileID: 11400000, guid: 33c89418b31fb244f80cebd8add0e9e0, type: 2}
@@ -1257,23 +1257,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1ef505b880bd0f6488ada8e488ece3e4, type: 3}
   - {fileID: 8300000, guid: c9891cdc166fe9543a3028a51511edb7, type: 3}
   - {fileID: 8300000, guid: d38cebbaa99b9ad4891630cb561931d6, type: 3}
---- !u!114 &1851925599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851925588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65c42604bbf2ace44b8140d11e894935, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camTransform: {fileID: 2083051069}
-  cam: {fileID: 2083051068}
-  shakeDuration: 0.2
-  shakeAmount: 1
-  decreaseFactor: 1
 --- !u!1 &2079593734
 GameObject:
   m_ObjectHideFlags: 0
