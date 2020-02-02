@@ -150,12 +150,28 @@ public struct FileData
 
     public int sizeBytes;
 
+    [Space(10)] 
+    public string filePassword;
+
     [Space(10)]
     [TextArea(15, 60)]
     public string text;
 
     [Space(10)]
     public Sprite image;
+
+    public bool DoesInputMatchPassword(string[] inputString)
+    {
+        if (inputString.Length > 3)
+        {
+            if (inputString[3] == filePassword)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
 
 [System.Serializable]
@@ -163,5 +179,6 @@ public enum FILE_TYPE
 {
     NONE,
     TEXT,
-    IMAGE
+    IMAGE,
+    PASSWORD
 }

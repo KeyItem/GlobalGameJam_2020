@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0498e41da56d664eb305fac1f2b1da2, type: 3}
   m_Name: RootFolder
   m_EditorClassIdentifier: 
-  name: 
+  name: Root
   lastAccessDate: 
   sizeBytes: 0
-  commands:
-  - {fileID: 11400000, guid: 116908e737185f84388f76c20334274a, type: 2}
-  - {fileID: 11400000, guid: 00806d92f633cf4438059862721977ab, type: 2}
+  commands: []
   parentFolder: {fileID: 11400000}
   folders:
   - {fileID: 11400000, guid: c157f036e3841964695e3d0f696a3871, type: 2}
@@ -38,8 +36,8 @@ MonoBehaviour:
     text: 
     image: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}
   - name: ToBePrinted.pdf
-    type: 2
+    type: 1
     lastAccessDate: TODO
     sizeBytes: 0
-    text: 
+    text: Hello to be Printed
     image: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}

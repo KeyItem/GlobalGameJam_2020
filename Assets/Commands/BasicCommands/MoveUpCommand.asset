@@ -16,7 +16,7 @@ MonoBehaviour:
     name: MoveUp
     commandType: 1
     commandString: cd
-    alternativeCommandString: Moveup
+    alternativeCommandString: moveup
     commandText: Moving to Parent Folder
   arguments:
-    rawArguments: 
+    rawArguments: ..

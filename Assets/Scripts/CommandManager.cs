@@ -99,8 +99,17 @@ public class CommandManager : MonoBehaviour
             string[] commandString = SplitStringIntoParts(currentString);
 
             COMMAND_TYPE commandType = ReturnCommandTypeFromString(commandString);
-            
-            CommandParser(commandString, commandType);
+
+            if (IsCustomCommandAvailable(commandString, customCommands))
+            {
+                Command customCommand = ReturnCustomCommand(commandString, customCommands);
+                
+                customCommand.ExecuteCommand();
+            }
+            else
+            {
+                CommandParser(commandString, commandType);
+            }
 
             currentString = string.Empty;
             UI.SetNewInputText(currentString);
@@ -117,14 +126,14 @@ public class CommandManager : MonoBehaviour
                         {
                             FolderFile newFolder = filesystem.ReturnFolder(commandString);
                         
-                            MoveToCommand(newFolder);
+                            MoveToCommand(newFolder, commandString);
                             break;
                         }
                         else if (commandString[1] == "..")
                         {
                             FolderFile newFolder = filesystem.ReturnParentFolder();
 
-                            MoveToParentCommand(newFolder);
+                            MoveToParentCommand(newFolder, commandString);
                             break;
                         }
                     }
@@ -140,7 +149,7 @@ public class CommandManager : MonoBehaviour
                     FolderFile[] listOfFolders = filesystem.ReturnFoldersInFolder();
                     FileData[] listOfFiles = filesystem.ReturnFilesInFolder();
                     
-                    ListCommand(listOfFolders, listOfFiles);
+                    ListCommand(listOfFolders, listOfFiles, commandString);
                     break;
                 
                 case COMMAND_TYPE.OPEN:
@@ -148,7 +157,7 @@ public class CommandManager : MonoBehaviour
                     {
                         FileData newFile = filesystem.ReturnFile(commandString);
                         
-                        OpenCommand(newFile);
+                        OpenCommand(newFile, commandString);
                         break;
                     }
                     else
@@ -167,7 +176,7 @@ public class CommandManager : MonoBehaviour
             }
         }
 
-        private void MoveToCommand(FolderFile folder)
+        private void MoveToCommand(FolderFile folder, string[] commandString)
         {
             if (folder != null)
             {
@@ -178,13 +187,13 @@ public class CommandManager : MonoBehaviour
                 
                 SetAvailableCustomCommands(folder.commands);
                 
-                ListCommand(filesystem.ReturnFoldersInFolder(), filesystem.ReturnFilesInFolder());
+                ListCommand(filesystem.ReturnFoldersInFolder(), filesystem.ReturnFilesInFolder(), commandString);
 
                 Debug.Log("Move To Command");
             }
         }
 
-        private void MoveToParentCommand(FolderFile folder)
+        private void MoveToParentCommand(FolderFile folder, string[] commandString)
         {
             if (folder != null)
             {
@@ -193,7 +202,7 @@ public class CommandManager : MonoBehaviour
                 
                 filesystem.MoveToFolder(folder);
                 
-                ListCommand(filesystem.ReturnFoldersInFolder(), filesystem.ReturnFilesInFolder());
+                ListCommand(filesystem.ReturnFoldersInFolder(), filesystem.ReturnFilesInFolder(), commandString);
                 
                 Debug.Log("Move To Parent Command");
             }
@@ -210,7 +219,7 @@ public class CommandManager : MonoBehaviour
             Debug.Log("Move Error Command");
         }
 
-        private void ListCommand(FolderFile[] folders, FileData[] files)
+        private void ListCommand(FolderFile[] folders, FileData[] files, string[] commandString)
         {
             UI.CloseOpenWindows();
             UI.ClearBacklogText();
@@ -242,7 +251,7 @@ public class CommandManager : MonoBehaviour
             Debug.Log("List Command");
         }
 
-        private void OpenCommand(FileData file)
+        private void OpenCommand(FileData file, string[] commandString)
         {
             UI.CloseOpenWindows();
             UI.ClearBacklogText();
@@ -255,6 +264,8 @@ public class CommandManager : MonoBehaviour
                 
                 case FILE_TYPE.IMAGE:
                     UI.LoadImage(file.image);
+                    break;
+                case FILE_TYPE.PASSWORD:
                     break;
             }
         }
@@ -292,7 +303,7 @@ public class CommandManager : MonoBehaviour
             customCommands = newCommands;
         }
         
-        protected Command ReturnCommand(string[] commandString, Command[] listOfAvailableCommands)
+        protected Command ReturnCustomCommand(string[] commandString, Command[] listOfAvailableCommands)
         {
             if (commandString.Length > 1)
             {
@@ -379,20 +390,23 @@ public class CommandManager : MonoBehaviour
 
         private bool IsCustomCommandAvailable(string[] newCommand, Command[] listOfAvailableCommands)
         {
-            if (newCommand.Length > 1)
+            if (listOfAvailableCommands.Length > 0)
             {
-                for (int i = 0; i < listOfAvailableCommands.Length; i++)
+                if (newCommand.Length > 1)
                 {
-                    if (newCommand[0] == listOfAvailableCommands[i].info.commandString || newCommand[0] == listOfAvailableCommands[i].info.alternativeCommandString)
+                    for (int i = 0; i < listOfAvailableCommands.Length; i++)
                     {
-                        if (newCommand[1] == listOfAvailableCommands[i].arguments.rawArguments)
+                        if (newCommand[0] == listOfAvailableCommands[i].info.commandString || newCommand[0] == listOfAvailableCommands[i].info.alternativeCommandString)
                         {
-                            return true;
+                            if (newCommand[1] == listOfAvailableCommands[i].arguments.rawArguments)
+                            {
+                                return true;
+                            }
                         }
                     }
                 }
             }
-
+            
             return false;
         }
 
