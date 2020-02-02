@@ -28,11 +28,11 @@ MonoBehaviour:
     hasPassword: 0
     text: Loading....
     image: {fileID: 0}
-  - name: 'fix.bat '
+  - name: fix.bat
     type: 1
     lastAccessDate: File
     sizeBytes: 0
-    filePassword: '02021992    '
+    filePassword: 02021992
     hasPassword: 1
     text: Document has been fixed.
     image: {fileID: 0}

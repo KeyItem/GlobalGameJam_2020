@@ -282,6 +282,8 @@ public class CommandManager : MonoBehaviour
                             Debug.Log("Opening text file :: " + file.name);
                             break;
                         }
+                        
+                        OpenPasswordErrorCommand();
                     }
                     else
                     {
@@ -302,6 +304,8 @@ public class CommandManager : MonoBehaviour
                             Debug.Log("Opening image file :: " + file.name);
                             break;
                         }
+                        
+                        OpenPasswordErrorCommand();
                     }
                     else
                     {
