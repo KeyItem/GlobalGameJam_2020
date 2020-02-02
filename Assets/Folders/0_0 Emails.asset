@@ -28,7 +28,7 @@ MonoBehaviour:
     text: "From: dFeral@MOffices.com\r\nDate: 1/31/2020\r\nSubject: [Top Priortiy]
       Must do before meeting\r\nHey Robin,\r\n\r\nHere\u2019s the pdf file with our
       business proposal I mentioned last night. Sorry I can't get to it today. But
-      hey! pn the bright side, this is our biggest break yet so please print toBePrinted.pdf
+      hey! On the bright side, this is our biggest break yet so please print toBePrinted.pdf
       before our meeting today!\r\n\r\nAlso, IT has been getting swarmed with tickets
       ever since that security breach a couple of days ago. So you might run into
       some problems opening some docs. I hope that Rachel brought you up to speed
@@ -102,7 +102,7 @@ MonoBehaviour:
     hasPassword: 0
     text: 'From: infoVIP@NNP.com
 
-      Date: 01/13/2020
+      Date: 01/14/2020
 
       Subject: (No Subjet)
 
@@ -171,6 +171,6 @@ MonoBehaviour:
       Junior IT positions\r\n\r\nHey, this is Sarah, \r\n\r\nI\u2019m apologizing
       on behalf of Richard who decided to hack your network yesterday.\r\n\r\nI know
       I helped him leak personal information, but trust me, I totally didn\u2019t
-      know. I thought we were \r\n\r\nPlease I\u2019m begging you all to give me
-      another chance.\r\n\r\n\r\nSarah, Reformed and ready to work!\r\n"
+      know.\n\r\nPlease I\u2019m begging you all to give me another chance.\r\n\r\n\r\nSarah,
+      Reformed and ready to work!\r\n"
     image: {fileID: 0}
