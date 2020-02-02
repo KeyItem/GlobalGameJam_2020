@@ -13,27 +13,33 @@ MonoBehaviour:
   m_Name: 2_1 System
   m_EditorClassIdentifier: 
   name: System
-  lastAccessDate: 
+  lastAccessDate: Folder
   sizeBytes: 0
   commands: []
   parentFolder: {fileID: 11400000, guid: 2ec6054d14a8400438b01ca048d5f7b8, type: 2}
   folders: []
   files:
   - name: MINER.dll
-    type: 0
-    lastAccessDate: 
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: PC cannot open .dll files.
     image: {fileID: 0}
   - name: SYSTEM.dll
-    type: 0
-    lastAccessDate: 
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: PC cannot open .dll files.
     image: {fileID: 0}
   - name: index.dll
-    type: 0
-    lastAccessDate: 
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: PC cannot open .dll files.
     image: {fileID: 0}

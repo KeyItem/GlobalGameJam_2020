@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RootFolder
   m_EditorClassIdentifier: 
   name: Root
-  lastAccessDate: 
+  lastAccessDate: Folder
   sizeBytes: 0
   commands: []
   parentFolder: {fileID: 11400000}
@@ -24,20 +24,26 @@ MonoBehaviour:
   files:
   - name: Reminder.txt
     type: 1
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
+    hasPassword: 0
     text: "- Take care of emails.\r\n\n- Print stuff when needed.\r\n\n- Appointment
       for Lasik. \r\n\n- Funeral house.\r\n\n- Finally win a game of Chess.\n"
     image: {fileID: 0}
   - name: Cat.bmp
     type: 2
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
+    hasPassword: 0
     text: 
     image: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}
   - name: ToBePrinted.pdf
     type: 1
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
+    hasPassword: 0
     text: Hello to be Printed
     image: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}

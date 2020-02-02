@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0498e41da56d664eb305fac1f2b1da2, type: 3}
   m_Name: 1_2 HoustonWeAreTheProblem_Data
   m_EditorClassIdentifier: 
-  name: 
-  lastAccessDate: 
+  name: HoustonWeAreTheProblem_Data
+  lastAccessDate: Folder
   sizeBytes: 0
   commands: []
   parentFolder: {fileID: 11400000, guid: 304782b354aefbf4d834c90270b4ef8e, type: 2}
@@ -22,27 +22,35 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c49cf4d261c32fb4d8db095ca31e0cf6, type: 2}
   - {fileID: 11400000, guid: 800a60beccd09ff4e85ce11c8d592bdc, type: 2}
   files:
-  - name: app.file
-    type: 0
-    lastAccessDate: 
+  - name: app.info
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: 0222020
     image: {fileID: 0}
-  - name: globalgamemanager.file
-    type: 0
-    lastAccessDate: 
+  - name: globalgamemanager.asset
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: PC cannot open .asset files.
     image: {fileID: 0}
-  - name: level0.file
-    type: 0
-    lastAccessDate: 
+  - name: level0.scene
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: Missing files, cannot open using game engine.
     image: {fileID: 0}
   - name: 'resource.asset '
-    type: 0
-    lastAccessDate: 
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: PC cannot open .asset files.
     image: {fileID: 0}

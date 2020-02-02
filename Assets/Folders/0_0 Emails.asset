@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 0_0 Emails
   m_EditorClassIdentifier: 
   name: Emails
-  lastAccessDate: 
+  lastAccessDate: Folder
   sizeBytes: 0
   commands: []
   parentFolder: {fileID: 11400000, guid: 184fec042f2119e41b93c7da51a942b8, type: 2}
@@ -21,20 +21,23 @@ MonoBehaviour:
   files:
   - name: Notice.msg
     type: 1
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
     text: "From: dFeral@MOffices.com\r\nDate: 01/31/2020\r\nSubject: [Top Priortiy]
-      Must do before meeting\r\nHey Robin,\r\n\r\nHere\u2019s the pdf file I mentioned
-      last night. This is our biggest break yet so please print toBePrinted.pdf before
-      our meeting today!\r\n\r\nAlso, IT has been getting swarmed with tickets ever
-      since that security breach a couple of days ago. So you might run into some
-      problems opening some docs. I hope that Rachel brought you up to speed with
-      the new troubleshooting procedures.\r\n\r\nCheers!\r\n\r\nDaryl.\r\n"
+      Must do before meeting\r\nHey Robin,\r\n\r\nHere\u2019s the pdf file with our
+      business proposal I mentioned last night. This is our biggest break yet so
+      please print toBePrinted.pdf before our meeting today!\r\n\r\nAlso, IT has
+      been getting swarmed with tickets ever since that security breach a couple
+      of days ago. So you might run into some problems opening some docs. I hope
+      that Rachel brought you up to speed with the new troubleshooting procedures.\r\n\r\nLet\u2019s
+      get this bread!\r\n\r\nDaryl.\r\n"
     image: {fileID: 0}
   - name: PurchaseOrder.msg
     type: 1
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
     text: 'From: donotreply@QuickFixes.com
 
       Date: 01/15/2020
@@ -69,8 +72,9 @@ MonoBehaviour:
     image: {fileID: 0}
   - name: Bou.msg
     type: 1
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
     text: "From: info@unorganization.org\r\nDate: 0/0/0000\r\nSubject: Notice from
       BOUN\r\n\r\nThe Board of United Nations wishes to notify you once again of
       your status via your email address as our previous letter to your home address
@@ -88,8 +92,9 @@ MonoBehaviour:
     image: {fileID: 0}
   - name: P.msg
     type: 1
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
     text: 'From: infoVIP@NNP.com
 
       Date: 0/0/0000
@@ -133,8 +138,9 @@ MonoBehaviour:
     image: {fileID: 0}
   - name: spamfix.msg
     type: 1
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
     text: "From: sMich@MOfficesIT.com\r\nDate: 01/13/2020\r\nSubject: [Ticket Status:
       Solved] Spam Emails\r\n\r\nWe solved the spam emails you\u2019ve been getting.\r\n\r\nIf
       there\u2019s anything else we could help with, please don\u2019t hesitate to
@@ -142,15 +148,17 @@ MonoBehaviour:
     image: {fileID: 0}
   - name: annoucement.msg
     type: 1
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
     text: "From: talentFinder@MOfficesIT.com\r\nDate: 01/27/2020\r\nSubject: [Job
       Posting] Junior IT positions\r\n\r\nSIKE WE LIVE 4 EVER\r :D"
     image: {fileID: 0}
   - name: RE_annoucement.msg
     type: 1
-    lastAccessDate: TODO
+    lastAccessDate: File
     sizeBytes: 0
+    filePassword: 
     text: "From: SavyMich@Rmail.com\r\nDate: 01/28/2020\r\nSubject: Re: [Job Posting]
       Junior IT positions\r\n\r\nHey, this is Sarah, \r\n\r\nI\u2019m apologizing
       on behalf of Richard who decided to hack your network yesterday.\r\n\r\nI know

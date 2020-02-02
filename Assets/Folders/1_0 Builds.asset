@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1_0 Builds
   m_EditorClassIdentifier: 
   name: Builds
-  lastAccessDate: 
+  lastAccessDate: Folder
   sizeBytes: 0
   commands: []
   parentFolder: {fileID: 11400000, guid: 184fec042f2119e41b93c7da51a942b8, type: 2}

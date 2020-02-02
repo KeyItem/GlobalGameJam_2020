@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0498e41da56d664eb305fac1f2b1da2, type: 3}
   m_Name: 1_2_0 GI
   m_EditorClassIdentifier: 
-  name: 
-  lastAccessDate: 
+  name: GI
+  lastAccessDate: Folder
   sizeBytes: 0
   commands: []
   parentFolder: {fileID: 11400000, guid: ddffb504ad6185e45b7411c0e46dafde, type: 2}
   folders: []
-  files: []
+  files:
+  - name: Corrupted
+    type: 1
+    lastAccessDate: File
+    sizeBytes: 0
+    filePassword: 
+    hasPassword: 0
+    text: Content has been lost. Please contact IT to recover data.
+    image: {fileID: 0}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0498e41da56d664eb305fac1f2b1da2, type: 3}
   m_Name: 1_1 HoustonWeAreTheProblem
   m_EditorClassIdentifier: 
-  name: HouseWeAreTheProblem
-  lastAccessDate: 
+  name: HoustonWeAreTheProblem
+  lastAccessDate: Folder
   sizeBytes: 0
   commands: []
   parentFolder: {fileID: 11400000, guid: 2a19173c1e8bfe14d8e6f36c3fbff408, type: 2}
@@ -21,20 +21,34 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ddffb504ad6185e45b7411c0e46dafde, type: 2}
   files:
   - name: HoustonWeAreTheProblem.exe
-    type: 0
-    lastAccessDate: TODO
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: 'Game folders not found.
+
+
+      Details:
+
+
+      Missing files in GI,
+      Managed, Domo, and Resources.'
     image: {fileID: 0}
   - name: 'GGJ20.dll '
-    type: 0
-    lastAccessDate: TODO
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: PC cannot open .dll files.
     image: {fileID: 0}
   - name: 'Credits.txt '
-    type: 0
-    lastAccessDate: 
+    type: 1
+    lastAccessDate: File
     sizeBytes: 0
-    text: 
+    filePassword: 
+    hasPassword: 0
+    text: "\rCredits:\r\nMatthew Ferreira - Programmer.\r\nRyon Everett - Audio.\r\nSteven
+      Ramos - Game Designer.\r\nVan Tran - Moral Support."
     image: {fileID: 0}
