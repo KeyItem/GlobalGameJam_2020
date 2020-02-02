@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0498e41da56d664eb305fac1f2b1da2, type: 3}
   m_Name: RootFolder
   m_EditorClassIdentifier: 
+  commands:
+  - {fileID: 11400000, guid: 116908e737185f84388f76c20334274a, type: 2}
+  - {fileID: 11400000, guid: 00806d92f633cf4438059862721977ab, type: 2}
   folders:
   - {fileID: 0}
   files:

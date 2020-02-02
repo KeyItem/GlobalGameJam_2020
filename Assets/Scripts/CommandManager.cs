@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommandTyper : MonoBehaviour
+public class CommandManager : MonoBehaviour
 {
     [Header("UI Attributes")] 
     private UIManager UI;
@@ -12,7 +12,7 @@ public class CommandTyper : MonoBehaviour
     public Command[] allCommands;
     
     [Space(10)]
-    public Command[] possibleCommands;
+    public Command[] customCommands;
 
     [Space(10)] 
     public Command errorCommand;
@@ -22,13 +22,14 @@ public class CommandTyper : MonoBehaviour
     
     [Header("Input Attributes")] 
     private string currentString;
-    private string currentFunctionString;
-    private string currentArguementString;
-    
+
     private char lastChar;
     
     [SerializeField]
     private bool canInput = true;
+
+    [Header("File System Attributes")] 
+    private FileSystem filesystem;
 
     private void Awake()
     {
@@ -43,7 +44,8 @@ public class CommandTyper : MonoBehaviour
     protected void Initialize()
     {
         UI = GetComponent<UIManager>();
-        
+        filesystem = GetComponent<FileSystem>();
+
         currentString = "";
     }
 
@@ -94,29 +96,34 @@ public class CommandTyper : MonoBehaviour
         {
             string[] newSplitString = SplitStringIntoParts(currentString);
             
-            if (IsInputBasicCommand(newSplitString))
+            if (IsCustomCommandAvailable(newSplitString, customCommands))
             {
-                Command newBasicCommand = ReturnBasicCommand(newSplitString);
-                    
-                EnterBasicCommand(newBasicCommand);
-            }
-            else if (IsInputAvailableCommand(newSplitString, possibleCommands))
-            {
-                Command newCommand = ReturnCommand(newSplitString, possibleCommands);
+                Command newCommand = ReturnCommand(newSplitString, customCommands);
                     
                 EnterCommand(newCommand);
+            }
+
+            COMMAND_TYPE newCommandType = ReturnCommandTypeFromString(newSplitString);
+
+            if (newCommandType != COMMAND_TYPE.NONE)
+            {
+                Command newBasicCommand = ReturnBasicCommand(newSplitString);
+                
+                EnterBasicCommand(newBasicCommand);
             }
             else
             {
                 EnterBasicCommand(errorCommand);
             }
-        
+
             currentString = string.Empty;
             UI.SetNewInputText(currentString);
         }
     
         protected void EnterCommand(Command command)
         {
+            UI.CloseOpenWindows();
+
             UI.SetNewBacklogText(command.info.commandText);
             
             command.InitializeCommand();
@@ -125,12 +132,19 @@ public class CommandTyper : MonoBehaviour
 
         protected void EnterBasicCommand(Command command)
         {
+            UI.CloseOpenWindows();
+            
             UI.SetNewBacklogText(command.info.commandText);
             
             command.InitializeCommand();
             command.ExecuteCommand();
         }
 
+        public void SetAvailableCommands(Command[] newCommands)
+        {
+            customCommands = newCommands;
+        }
+        
         protected Command ReturnLastCommand()
         {
             return lastCommandEntered;
@@ -157,11 +171,25 @@ public class CommandTyper : MonoBehaviour
 
         protected Command ReturnBasicCommand(string[] commandString)
         {
-            for (int i = 0; i < allCommands.Length; i++)
+            if (commandString.Length > 1)
             {
-                if (commandString[0] == allCommands[i].info.commandString || commandString[0] == allCommands[i].info.alternativeCommandString)
+                for (int i = 0; i < allCommands.Length; i++)
                 {
-                    return allCommands[i];
+                    if (commandString[0] == allCommands[i].info.commandString || commandString[0] == allCommands[i].info.alternativeCommandString)
+                    {
+                        if (commandString[1] == allCommands[i].arguments.rawArguments)
+                        {
+                            return allCommands[i];
+                        }
+                    }
+                }
+            }
+
+            for (int o = 0; o < allCommands.Length; o++)
+            {
+                if (commandString[0] == allCommands[o].info.commandString || commandString[0] == allCommands[o].info.alternativeCommandString)
+                {
+                    return allCommands[o];
                 }
             }
             
@@ -177,9 +205,23 @@ public class CommandTyper : MonoBehaviour
         
         protected bool IsInputBasicCommand(string[] newString)
         {
-            for (int i = 0; i < allCommands.Length; i++)
+            if (newString.Length > 1)
             {
-                if (newString[0] == allCommands[i].info.commandString || newString[0] == allCommands[i].info.alternativeCommandString)
+                for (int i = 0; i < allCommands.Length; i++)
+                {
+                    if (newString[0] == allCommands[i].info.commandString || newString[0] == allCommands[i].info.alternativeCommandString)
+                    {
+                        if (newString[1] == allCommands[i].arguments.rawArguments)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            for (int o = 0; o < allCommands.Length; o++)
+            {
+                if (newString[0] == allCommands[o].info.commandString || newString[0] == allCommands[o].info.alternativeCommandString)
                 {
                     return true;
                 }
@@ -188,7 +230,7 @@ public class CommandTyper : MonoBehaviour
             return false;
         }
 
-        private bool IsInputAvailableCommand(string[] newCommand, Command[] listOfAvailableCommands)
+        private bool IsCustomCommandAvailable(string[] newCommand, Command[] listOfAvailableCommands)
         {
             if (newCommand.Length > 1)
             {
@@ -206,20 +248,20 @@ public class CommandTyper : MonoBehaviour
 
             return false;
         }
-    
-        protected CommandInfo ReturnCommandFromString(string newString, CommandInfo[] listOfAvailableCommands)
+
+        protected COMMAND_TYPE ReturnCommandTypeFromString(string[] newString)
         {
-            CommandInfo newCommand = new CommandInfo();
+            COMMAND_TYPE newCommandType = COMMAND_TYPE.NONE;
         
-            for (int i = 0; i < listOfAvailableCommands.Length; i++)
+            for (int i = 0; i < allCommands.Length; i++)
             {
-                if (newString == listOfAvailableCommands[i].commandString)
+                if (newString[0] == allCommands[i].info.commandString || newString[0] == allCommands[i].info.alternativeCommandString)
                 {
-                    newCommand = listOfAvailableCommands[i];
+                    return allCommands[i].info.commandType;
                 }
             }
 
-            return newCommand;
+            return newCommandType;
         }
 
         private bool IsBackspaceInput(char key)

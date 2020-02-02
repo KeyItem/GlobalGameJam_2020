@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0043af8815302bf4eb355f1fb8b79236, type: 3}
-  m_Name: Open_Image_Important.png
+  m_Name: OpenImage_Cat.bmp
   m_EditorClassIdentifier: 
   info:
     name: Open Important Image
     commandType: 3
     commandString: open
     alternativeCommandString: open
-    commandText: 'Opening :: Important.png'
+    commandText: Opening // cat.bmp
   arguments:
-    rawArguments: Important.png
+    rawArguments: cat.bmp
   imageFile: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}
