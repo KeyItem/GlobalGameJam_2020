@@ -139,7 +139,7 @@ public class CommandManager : MonoBehaviour
                             MoveToCommand(newFolder, commandString);
                             break;
                         }
-                        else if (commandString[1] == "..")
+                        else if (commandString[1].Equals("..", StringComparison.OrdinalIgnoreCase))
                         {
                             FolderFile newFolder = filesystem.ReturnParentFolder();
 
@@ -278,12 +278,16 @@ public class CommandManager : MonoBehaviour
                         if (file.DoesInputMatchPassword(commandString))
                         {
                             UI.LoadText(file.text);
+                            
+                            Debug.Log("Opening text file :: " + file.name);
                             break;
                         }
                     }
                     else
                     {
                         UI.LoadText(file.text);
+                        
+                        Debug.Log("Opening text file :: " + file.name);
                     }
                     
                     break;
@@ -294,12 +298,16 @@ public class CommandManager : MonoBehaviour
                         if (file.DoesInputMatchPassword(commandString))
                         {
                             UI.LoadImage(file.image);
+                            
+                            Debug.Log("Opening image file :: " + file.name);
                             break;
                         }
                     }
                     else
                     {
                         UI.LoadImage(file.image);
+                        
+                        Debug.Log("Opening image file :: " + file.name);
                     }                    
                     break;
             }
@@ -361,9 +369,9 @@ public class CommandManager : MonoBehaviour
             {
                 for (int i = 0; i < listOfAvailableCommands.Length; i++)
                 {
-                    if (commandString[0] == listOfAvailableCommands[i].info.commandString || commandString[0] == listOfAvailableCommands[i].info.alternativeCommandString)
+                    if (commandString[0].Equals(listOfAvailableCommands[i].info.commandString, StringComparison.OrdinalIgnoreCase)  || commandString[0].Equals(listOfAvailableCommands[i].info.alternativeCommandString, StringComparison.OrdinalIgnoreCase))
                     {
-                        if (commandString[1] == listOfAvailableCommands[i].arguments.rawArguments)
+                        if (commandString[1].Equals(listOfAvailableCommands[i].arguments.rawArguments, StringComparison.OrdinalIgnoreCase))
                         {
                             return listOfAvailableCommands[i];
                         }
@@ -380,9 +388,9 @@ public class CommandManager : MonoBehaviour
             {
                 for (int i = 0; i < allCommands.Length; i++)
                 {
-                    if (commandString[0] == allCommands[i].info.commandString || commandString[0] == allCommands[i].info.alternativeCommandString)
+                    if (commandString[0].Equals(allCommands[i].info.commandString, StringComparison.OrdinalIgnoreCase) || commandString[0].Equals(allCommands[i].info.alternativeCommandString, StringComparison.OrdinalIgnoreCase))
                     {
-                        if (commandString[1] == allCommands[i].arguments.rawArguments)
+                        if (commandString[1].Equals(allCommands[i].arguments.rawArguments, StringComparison.OrdinalIgnoreCase))
                         {
                             Debug.Log(commandString[1]);
                             
@@ -394,7 +402,7 @@ public class CommandManager : MonoBehaviour
 
             for (int j = 0; j < allCommands.Length; j++)
             {
-                if (commandString[0] == allCommands[j].info.commandString || commandString[0] == allCommands[j].info.alternativeCommandString)
+                if (commandString[0].Equals(allCommands[j].info.commandString, StringComparison.OrdinalIgnoreCase) || commandString[0].Equals(allCommands[j].info.alternativeCommandString, StringComparison.OrdinalIgnoreCase))
                 {
                     if (allCommands[j].arguments.rawArguments == string.Empty)
                     {
@@ -448,9 +456,9 @@ public class CommandManager : MonoBehaviour
                 {
                     for (int i = 0; i < listOfAvailableCommands.Length; i++)
                     {
-                        if (newCommand[0] == listOfAvailableCommands[i].info.commandString || newCommand[0] == listOfAvailableCommands[i].info.alternativeCommandString)
+                        if (newCommand[0].Equals(listOfAvailableCommands[i].info.commandString, StringComparison.OrdinalIgnoreCase) || newCommand[0].Equals(listOfAvailableCommands[i].info.alternativeCommandString, StringComparison.OrdinalIgnoreCase))
                         {
-                            if (newCommand[1] == listOfAvailableCommands[i].arguments.rawArguments)
+                            if (newCommand[1].Equals(listOfAvailableCommands[i].arguments.rawArguments, StringComparison.OrdinalIgnoreCase))
                             {
                                 return true;
                             }
@@ -468,7 +476,7 @@ public class CommandManager : MonoBehaviour
         
             for (int i = 0; i < allCommands.Length; i++)
             {
-                if (newString[0] == allCommands[i].info.commandString || newString[0] == allCommands[i].info.alternativeCommandString)
+                if (newString[0].Equals(allCommands[i].info.commandString, StringComparison.OrdinalIgnoreCase) || newString[0].Equals(allCommands[i].info.alternativeCommandString, StringComparison.OrdinalIgnoreCase))
                 {
                     return allCommands[i].info.commandType;
                 }

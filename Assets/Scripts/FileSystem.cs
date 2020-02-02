@@ -56,7 +56,7 @@ public class FileSystem : MonoBehaviour
         {
             if (newCommand.Length > 1)
             {
-                if (newCommand[1] == currentAvailableFiles[i].name)
+                if (newCommand[1].Equals(currentAvailableFiles[i].name, StringComparison.OrdinalIgnoreCase))
                 {
                     return currentAvailableFiles[i];
                 }
@@ -72,7 +72,7 @@ public class FileSystem : MonoBehaviour
         {
             if (newCommand.Length > 1)
             {
-                if (newCommand[1] == currentAvailableFiles[i].name)
+                if (newCommand[1].Equals(currentAvailableFiles[i].name, StringComparison.OrdinalIgnoreCase))
                 {
                     return true;
                 }
@@ -88,7 +88,7 @@ public class FileSystem : MonoBehaviour
         {
             if (newCommand.Length > 1)
             {
-                if (newCommand[1] == currentFolder.folders[i].name)
+                if (newCommand[1].Equals(currentFolder.folders[i].name, StringComparison.OrdinalIgnoreCase))
                 {
                     return currentFolder.folders[i];
                 }
@@ -114,7 +114,7 @@ public class FileSystem : MonoBehaviour
         {
             foreach (FolderFile folder in currentFolder.folders)
             {
-                if (newCommand[1] == folder.name)
+                if (newCommand[1].Equals(folder.name, StringComparison.OrdinalIgnoreCase))
                 {
                     return true;
                 }
@@ -166,7 +166,7 @@ public struct FileData
     {
         if (inputString.Length > 3)
         {
-            if (inputString[3] == filePassword)
+            if (inputString[3].Equals(filePassword, StringComparison.OrdinalIgnoreCase))
             {
                 return true;
             }

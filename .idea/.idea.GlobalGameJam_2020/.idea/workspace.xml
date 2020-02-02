@@ -50,9 +50,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Commands/CommandOpenPasswordFile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Commands/Command.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CommandManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" />
       </list>
     </option>
   </component>
