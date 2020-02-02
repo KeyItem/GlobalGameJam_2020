@@ -1251,9 +1251,9 @@ MonoBehaviour:
   bgmSource: {fileID: 1851925597}
   sfxSource: {fileID: 1851925596}
   sfxOptions:
-  - {fileID: 8300000, guid: 1ef505b880bd0f6488ada8e488ece3e4, type: 3}
-  - {fileID: 8300000, guid: c9891cdc166fe9543a3028a51511edb7, type: 3}
-  - {fileID: 8300000, guid: d38cebbaa99b9ad4891630cb561931d6, type: 3}
+  - {fileID: 8300000, guid: f478e91112828ac48977ce98816d43a5, type: 3}
+  - {fileID: 8300000, guid: 25f89f410ac82584d8fe916a41269bd3, type: 3}
+  - {fileID: 8300000, guid: fc6a6233405509b4faf88c0c659d8b65, type: 3}
 --- !u!1 &2079593734
 GameObject:
   m_ObjectHideFlags: 0
