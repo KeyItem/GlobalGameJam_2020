@@ -88,8 +88,6 @@ public class UIManager : MonoBehaviour
         backlogText.text = string.Empty;
 
         activeTyper = DisplayTextBacklog(newText, displayAttributes.textDisplayDelay);
-
-        Debug.Log("Starting Text");
         
         StartCoroutine(activeTyper);
     }
@@ -104,8 +102,6 @@ public class UIManager : MonoBehaviour
         backlogText.text = string.Empty;
 
         activeTyper = DisplayTextWindow(newText, displayAttributes.textDisplayDelay);
-
-        Debug.Log("Starting Text");
         
         StartCoroutine(activeTyper);
     }

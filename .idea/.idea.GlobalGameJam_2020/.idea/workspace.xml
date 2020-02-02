@@ -18,7 +18,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Folders/FolderFileBasic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandGoUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameEnder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/Command.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandMove.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,8 +54,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/JUICE/CameraShake2D.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CommandManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameEnder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager/LevelManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CommandManager.cs" />
       </list>
     </option>
   </component>

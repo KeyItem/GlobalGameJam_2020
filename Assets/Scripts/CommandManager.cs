@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CommandManager : MonoBehaviour
 {
+    [Header("levelManager Manager")] 
+    private LevelManager levelManager;
+    
     [Header("Audio Attributes")] 
     public AudioManager audio;
     
@@ -26,6 +29,9 @@ public class CommandManager : MonoBehaviour
     
     [Space(10)]
     public Command lastCommandEntered;
+
+    [Space(10)] 
+    public FileData finalFile;
     
     [Header("Input Attributes")] 
     private string currentString;
@@ -51,6 +57,7 @@ public class CommandManager : MonoBehaviour
         UI = GetComponent<UIManager>();
         filesystem = GetComponent<FileSystem>();
         audio = GetComponent<AudioManager>();
+        levelManager = GetComponent<LevelManager>();
         currentString = "";
     }
 
@@ -276,6 +283,11 @@ public class CommandManager : MonoBehaviour
                     {
                         if (file.DoesInputMatchPassword(commandString))
                         {
+                            if (file.name == finalFile.name)
+                            {
+                                levelManager.GoToNextScene();
+                            }
+                            
                             UI.LoadText(file.text);
                             
                             Debug.Log("Opening text file :: " + file.name);
@@ -298,6 +310,11 @@ public class CommandManager : MonoBehaviour
                     {
                         if (file.DoesInputMatchPassword(commandString))
                         {
+                            if (file.name == finalFile.name)
+                            {
+                                levelManager.GoToNextScene();
+                            }
+
                             UI.LoadImage(file.image);
                             
                             Debug.Log("Opening image file :: " + file.name);
