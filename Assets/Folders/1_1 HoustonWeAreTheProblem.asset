@@ -46,6 +46,7 @@ MonoBehaviour:
     sizeBytes: 0
     filePassword: 
     hasPassword: 0
-    text: "\rCredits:\r\nMatthew Ferreira - Programmer.\r\nRyon Everett - Audio.\r\nSteven
-      Ramos - Game Designer.\r\nVan Tran - Moral Support."
+    text: "\rCredits:\r\n\nMatthew Ferreira - Programmer.\r\nRyon Everett - Audio.\r\nSteven
+      Ramos - Game Designer.\r\nVan Tran - Moral Support.\n\n\nAssets used from:\r\n\nhttp://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20\r\nBethesda
+      Softworks\r\n"
     image: {fileID: 0}
