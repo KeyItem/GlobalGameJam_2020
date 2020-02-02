@@ -39,12 +39,12 @@ MonoBehaviour:
     filePassword: 
     hasPassword: 0
     text: 
-    image: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}
+    image: {fileID: 21300000, guid: d3c7aee75cfb17f4c86bbbb61faafa99, type: 3}
   - name: ToBePrinted.pdf
-    type: 1
+    type: 2
     lastAccessDate: File
     sizeBytes: 0
-    filePassword: 
-    hasPassword: 0
+    filePassword: 0000001
+    hasPassword: 1
     text: 
-    image: {fileID: 21300000, guid: 9a8f4be412ed7414c8996df6b4c1ed63, type: 3}
+    image: {fileID: 21300000, guid: 66949759b3dadd84cb52a2c19f9350ec, type: 3}
