@@ -153,6 +153,8 @@ public struct FileData
     [Space(10)] 
     public string filePassword;
 
+    public bool hasPassword;
+
     [Space(10)]
     [TextArea(15, 60)]
     public string text;
@@ -180,5 +182,4 @@ public enum FILE_TYPE
     NONE,
     TEXT,
     IMAGE,
-    PASSWORD
 }

@@ -47,5 +47,6 @@ public enum COMMAND_TYPE
     LIST,
     OPEN,
     HELP,
-    ERROR
+    ERROR,
+    QUIT
 }

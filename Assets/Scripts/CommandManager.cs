@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.WSA;
 
 public class CommandManager : MonoBehaviour
 {
@@ -19,6 +18,7 @@ public class CommandManager : MonoBehaviour
     public Command helpCommand;
     public Command moveErrorCommand;
     public Command openErrorCommand;
+    public Command openPasswordErrorCommand;
     public Command errorCommand;
     
     [Space(10)]
@@ -170,6 +170,10 @@ public class CommandManager : MonoBehaviour
                     HelpCommand();
                     break;
                 
+                case COMMAND_TYPE.QUIT:
+                    QuitCommand();
+                    break;
+                
                 default:
                     ErrorCommand();
                     break;
@@ -259,13 +263,34 @@ public class CommandManager : MonoBehaviour
             switch (file.type)
             {
                 case FILE_TYPE.TEXT:
-                    UI.LoadText(file.text);
+                    if (file.hasPassword)
+                    {
+                        if (file.DoesInputMatchPassword(commandString))
+                        {
+                            UI.LoadText(file.text);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        UI.LoadText(file.text);
+                    }
+                    
                     break;
                 
                 case FILE_TYPE.IMAGE:
-                    UI.LoadImage(file.image);
-                    break;
-                case FILE_TYPE.PASSWORD:
+                    if (file.hasPassword)
+                    {
+                        if (file.DoesInputMatchPassword(commandString))
+                        {
+                            UI.LoadImage(file.image);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        UI.LoadImage(file.image);
+                    }                    
                     break;
             }
         }
@@ -278,6 +303,16 @@ public class CommandManager : MonoBehaviour
             UI.SetNewBacklogText(openErrorCommand.info.commandText);
             
             Debug.Log("Open Error Command");
+        }
+
+        private void OpenPasswordErrorCommand()
+        {
+            UI.CloseOpenWindows();
+            UI.ClearBacklogText();
+            
+            UI.SetNewBacklogText(openPasswordErrorCommand.info.commandText);
+            
+            Debug.Log("Open Password Error Command");
         }
 
         private void HelpCommand()
@@ -297,6 +332,13 @@ public class CommandManager : MonoBehaviour
             UI.SetNewBacklogText(errorCommand.info.commandText);
             
             Debug.Log("Error Command");
+        }
+
+        private void QuitCommand()
+        {
+            Debug.Log("Quit Command");
+
+            Application.Quit();
         }
         public void SetAvailableCustomCommands(Command[] newCommands)
         {
