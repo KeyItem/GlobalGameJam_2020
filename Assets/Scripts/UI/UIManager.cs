@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     public void SetNewBacklogText(string newBacklogText)
     {
-        StartDisplayTyper(newBacklogText);
+        StartDisplayTyperBacklog(newBacklogText);
     }
 
     public void ClearBacklogText()
@@ -64,8 +64,9 @@ public class UIManager : MonoBehaviour
 
     public void LoadText(string newText)
     {
-        textBox.text = newText;
         textBox.enabled = true;
+        
+        StartDisplayTyperTextBox(newText);
     }
 
     public void CloseOpenWindows()
@@ -77,7 +78,7 @@ public class UIManager : MonoBehaviour
         textBox.text = string.Empty;
     }
 
-    private void StartDisplayTyper(string newText)
+    private void StartDisplayTyperBacklog(string newText)
     {
         if (activeTyper != null)
         {
@@ -86,20 +87,50 @@ public class UIManager : MonoBehaviour
 
         backlogText.text = string.Empty;
 
-        activeTyper = DisplayText(newText, displayAttributes.textDisplayDelay);
+        activeTyper = DisplayTextBacklog(newText, displayAttributes.textDisplayDelay);
 
         Debug.Log("Starting Text");
         
         StartCoroutine(activeTyper);
     }
     
-    private IEnumerator DisplayText(string newText, float delay)
+    private void StartDisplayTyperTextBox(string newText)
+    {
+        if (activeTyper != null)
+        {
+            StopCoroutine(activeTyper);
+        }
+
+        backlogText.text = string.Empty;
+
+        activeTyper = DisplayTextWindow(newText, displayAttributes.textDisplayDelay);
+
+        Debug.Log("Starting Text");
+        
+        StartCoroutine(activeTyper);
+    }
+    
+    private IEnumerator DisplayTextBacklog(string newText, float delay)
     {
         char[] letters = newText.ToCharArray();
         
         foreach (char letter in letters)
         {
             backlogText.text += letter;
+            
+            yield return new WaitForSeconds(delay);
+        }
+
+        yield return null;
+    }
+    
+    private IEnumerator DisplayTextWindow(string newText, float delay)
+    {
+        char[] letters = newText.ToCharArray();
+        
+        foreach (char letter in letters)
+        {
+            textBox.text += letter;
             
             yield return new WaitForSeconds(delay);
         }
