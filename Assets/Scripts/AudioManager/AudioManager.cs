@@ -34,8 +34,8 @@ public class AudioManager : MonoBehaviour
 
         AudioClip newSFX = ReturnRandomSFX(sfxOptions);
         sfxSource.clip = newSFX;
-        
-        sfxSource.Play();
+     
+        sfxSource.PlayOneShot(newSFX);
     }
 
     public void PauseSFX()
