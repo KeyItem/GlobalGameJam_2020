@@ -36,7 +36,7 @@ MonoBehaviour:
     sizeBytes: 0
     filePassword: 
     hasPassword: 0
-    text: PC cannot open .asset files.
+    text: 'Error : PC cannot open .asset files.'
     image: {fileID: 0}
   - name: level0.scene
     type: 1
@@ -44,7 +44,7 @@ MonoBehaviour:
     sizeBytes: 0
     filePassword: 
     hasPassword: 0
-    text: Missing files, cannot open using game engine.
+    text: 'Error : Missing files, cannot open using game engine.'
     image: {fileID: 0}
   - name: resource.asset
     type: 1
@@ -52,5 +52,5 @@ MonoBehaviour:
     sizeBytes: 0
     filePassword: 
     hasPassword: 0
-    text: PC cannot open .asset files.
+    text: 'Error: PC cannot open .asset files.'
     image: {fileID: 0}
