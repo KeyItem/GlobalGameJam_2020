@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CommandManager : MonoBehaviour
 {
+    [Header("Audio Attributes")] 
+    public AudioManager audio;
+    
     [Header("UI Attributes")] 
     private UIManager UI;
     
@@ -47,6 +50,7 @@ public class CommandManager : MonoBehaviour
     {
         UI = GetComponent<UIManager>();
         filesystem = GetComponent<FileSystem>();
+        audio = GetComponent<AudioManager>();
 
         currentString = "";
     }
@@ -80,6 +84,8 @@ public class CommandManager : MonoBehaviour
             currentString += key;
             
             UI.SetNewInputText(currentString);
+            
+            audio.StartSFX();
         }
 
         protected void Backspace()
@@ -92,6 +98,8 @@ public class CommandManager : MonoBehaviour
             
                 UI.SetNewInputText(currentString);
             }
+            
+            audio.StartSFX();
         }
 
         protected void Enter()
@@ -113,6 +121,8 @@ public class CommandManager : MonoBehaviour
 
             currentString = string.Empty;
             UI.SetNewInputText(currentString);
+            
+            audio.StartSFX();
         }
 
         private void CommandParser(string[] commandString, COMMAND_TYPE commandType)
